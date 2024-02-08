@@ -1,0 +1,246 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/con.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    
+ </head>
+    
+ <body>
+   
+    <!-- section 1 -->
+
+    <div class="container-fluid r1">
+        <div class="row pt-2 pb-2">
+            <div class="col-lg-4 col-md-4 col-sm-4"></div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <a href=""><img src="{% static 'images/icon-facebook.png' %}" alt="" class="=i1"></a>
+                <a href=""><img src="{% static 'images/icon-twitter.png' %}" alt="" class="i1 ms-4"></a>
+                <a href=""><img src="{% static 'images/icon-linkedin.png' %}" alt="" class="i1 ms-4"></a>
+                <a href=""><img src="{% static 'images/icon-instagram.png' %}" alt="" class="i1 ms-4"></a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <a href="" class="a1"><img src="{% static 'images/icon-message.png' %}" alt="" class="i1">info@roundplanet</a>
+                <a href="" class="a1"><img src="{% static 'images/icon-call.png' %}" alt="" class="i1 ms-5">+91 98765 43210</a>
+            </div>
+        </div>
+    </div>
+
+      <!-- section2 -->
+      <div class="container-fluid">
+        
+        <div class="row bg-white">
+            <div class="col-lg-5 col-md-5 col-sm-5">
+                <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="" class="logo"></a>
+            </div>
+            <div class="col-lg col-md col-sm mt-4 mb-3">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                 
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      
+                      <li>
+                        <a class="nav-link l2" aria-current="page" href="about">ABOUT US</a>
+                      </li>
+                      <li> 
+                        <a class="nav-link  ms-4" aria-current="page" href="packages">PACKAGES</a>
+                      </li>
+                      <li>
+                        <a class="nav-link l2 ms-4" aria-current="page" href="news">NEWS & EVENTS</a>
+                      </li>
+                      <li>
+                        <a class="nav-link l2 ms-4" aria-current="page" href="gallery">GALLERY</a>
+                      </li>
+                      <li>
+                        <a class="nav-link l3 ms-4" aria-current="page" href="contact">CONTACT US</a>
+                      </li>
+                    </ul>
+                    
+                  </div>
+                </div>
+              </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- section3 -->
+    <div class="c mt-4">
+        <div class="row">
+            <div class="col-lg col-md col-sm">
+              <div class=" d2 mt-4">Contact Us</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section-4 -->
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-4 bgr">
+                 <img src="{% static 'images/icon-call.png' %}" alt="" class=" image-icon bg-info">
+                 <h6 class="text-center mt-3">Phone</h6>
+                 <a href="" class="ahref"><p class="text-center">+91 6473239847</p></a>
+            </div>
+            <div class="col-lg-4 bgr mx-5">
+                 <img src="{% static 'images/icon-message.png' %}" alt="" class=" image-icon bg-info">
+                 <h6 class="text-center mt-3">Email</h6>
+                 <a href="" class="ahref"><p class="text-center">contactus@roundplanet.com</p></a>
+                 
+            </div>
+            <div class="col-lg-4 bgr">
+                <img src="{% static 'images/iconloc.png' %}" alt="" class=" image-icon bg-info">
+                <h6 class="text-center mt-3">Address</h6>
+                <p>RVR3+G2 Kebon Kosong, Central Jakarta City,
+                    Jakarta, Indonesia</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- section-5 -->
+
+    <div class="con-form mt-5">
+      <div class="container">
+        <div class="row  con-form1">
+            <div class="col-lg-5 mt-4">
+                <img src="{% static 'images/image1.jpg' %}" alt="" class="w-100 imgsrc">
+            </div>
+            <div class="col-lg-7">
+                <div class="row">
+                    <h4 class="mt-3">
+                        Send us a message                    
+                    </h4>
+                    <p>Please use the form below to send us a message, and we'll get back to you as soon as possible.</p>
+
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="col-lg-6 mb-3">
+                           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Name" name="name" required>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                           <input type="email" class="form-control " id="exampleFormControlInput1" placeholder="Email" name="email" required>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                           <input type="text" class="form-control " id="exampleFormControlInput1" placeholder="Phone Number"name="phone" required>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                           <input type="text" class="form-control " id="exampleFormControlInput1" placeholder="Subject" name="subject" required>
+                        </div>
+                        <div class="col-lg-12 mb-3">
+                           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message" name="message"></textarea>
+                        </div>
+                        <div class="col-lg-3">
+                           <button class="btn-btn pt-2 pb-2 Lear w-100" name="save+">SUBMIT</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- section-6 -->
+       <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-lg-12">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7910591759487!2d106.84994357554336!3d-6.158732093828436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5f8d2786d8b%3A0x9047a9426544a89f!2sRound%20D'%20Planet!5e0!3m2!1sen!2sin!4v1698404320147!5m2!1sen!2sin" width="1000" height="400" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>  
+            
+            </div>
+        </div>
+
+       </div>
+
+
+    <!-- section-5 -->
+  <div class="footer mt-5">
+    <div class="container">
+        <div class="row rtwo">
+            <div class="col-lg-1 col-md-1 col-sm-1">
+               <img src="{% static 'images/icon1.png' %}" alt="" class="imageicon">
+            </div>
+            <div class="col-lg col-md col-sm mt-3 ms-3 text-light">
+                <h5>Download Our Informative Brochure</h5>
+                <p>Get all the details you need about our offerings in one convenient brochure.</p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 mt-3">
+                <a href="" class="href1"><img src="{% static 'images/icon-download.png' %}" alt="" class="icon-download"><span class="ms-3 text-light">Download</span></a>
+            </div>
+        </div>
+        <div class="row mt-5 mb-5">
+            <div class="col-lg col-md col-sm mt-5">
+                <img src="{% static 'images/logo1.png' %}" alt="" class="w-30">
+            </div>
+            <div class="col-lg col-md col-sm mt-5">
+                <h4 class="text-light">Quick Links</h4>
+                <ul class="ul">
+                    <li><a href="" class="li">Home</a></li>
+                    <li><a href="" class="li">About Us</a></li>
+                    <li><a href="" class="li">Services</a></li>
+                    <li><a href="" class="li">Packages</a></li>
+                    <li><a href="" class="li">Gallery</a></li>
+                    <li><a href="" class="li">Testimonials</a></li>
+                    <li><a href="" class="li">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-lg col-md col-sm mt-5">
+                <h4 class="text-light">Our Packages</h4>
+                <ul class="ul">
+                    <li><a href="" class="li">Home</a></li>
+                    <li><a href="" class="li">About Us</a></li>
+                    <li><a href="" class="li">Services</a></li>
+                    <li><a href="" class="li">Packages</a></li>
+                    <li><a href="" class="li">Gallery</a></li>
+                    <li><a href="" class="li">Testimonials</a></li>
+                    <li><a href="" class="li">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-lg col-md col-sm mt-5">
+                <h4 class="text-light">Get In Touch</h4>
+                <p class="para2">
+                    Address Line 1, Address Line 2,<br>
+                    Location, Street Name <br>
+                    Country Pin 000000
+                    <br><br>
+                    <a href="" class="href2"> +91 98765 43210 </a>
+                    <br><br>
+                    <a href="" class="href2">info@rounddplanet.com</a>
+                </p>
+                <div class="col-lg col-md col-sm">
+                  <a href=""><img src="{% static 'images/icon-facebook.png' %}" alt="" class="icons1"></a>
+                  <a href=""><img src="{% static 'images/icon-twitter.png' %}" alt="" class="icons2 ms-2"></a>
+                  <a href=""><img src="{% static 'images/icon-linkedin.png' %}" alt="" class="icons3 ms-2"></a>
+                  <a href=""><img src="{% static 'images/icon-instagram.png' %}" alt="" class="icons4 ms-2"></a>
+                  <a href=""><img src="{% static 'images/icons-youtube.png' %}" alt="" class="icons5 ms-2"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="para3 text-light text-center">
+        <p class="mt-2">2023 © RoundD’ Planet. All Right Reserved.</p>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+   

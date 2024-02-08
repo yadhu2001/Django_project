@@ -1,0 +1,100 @@
+.duration-list {
+    width: 100%;
+    padding: 25px 15px;
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 3px;
+}
+.duration-list li {
+    list-style: none;
+    padding: 0px 0px 12px 0px;
+    margin: 0px 0px 12px 0px;
+    width: 100%;
+    color: var(--textcolor);
+    line-height: normal;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    font-size: 16px;
+}
+.inclusion-div {
+    width: 100%;
+    padding: 30px 11px;
+    margin: 25px 0px 0px 0px;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 3px;
+    float: left;
+}
+ .inclusion-div ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+ .inclusion-div ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 2px 12px;
+    margin: 4px;
+    font-size: 15px;
+    background:#008CBA ;
+    /* float:left; */
+    border-radius: 3px;
+    color: #fff;
+}
+
+.booking{
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 3px;
+    
+}
+.bookform{
+    background-color: rgb(241, 241, 241);
+}
+.btn-btn{
+    background-color: #008CBA;
+}
+
+ .package-heading {
+    width: 100%;
+    padding: 0px 0px 0px 30px;
+    margin: 0px 0px 20px 0px;
+    font-size: 22px;
+    position: relative;
+}
+ .accordion {
+    margin-bottom: 60px;
+    text-align: justify;
+}
+ .accordion .card {
+    margin-bottom: 15px;
+}
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+ .accordion p:last-child {
+    margin-bottom: 0px;
+}
+.card-header {
+    cursor: pointer;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.card {
+    position: relative;
+    display:-ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    /* word-wrap: break-word; */
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
